@@ -12,7 +12,7 @@ class Classifier:
         self.zero_shot_classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 
     def classify_text(self, text_to_classify: str, lables:list, multi_label_arg = True):
-        """Will take in some text, labels, and will produce a zero-shot classification.
+        """Will take in some text, labels, some flags, it will then produce a zero-shot classification.
         Returns a figure with the probabilities of each possibility. If multi_label_arg
         if False, then the probabilities will be normalized to add up to one
 
